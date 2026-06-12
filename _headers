@@ -1,0 +1,15 @@
+# Cloudflare Pages headers
+
+# API data: cache at the edge 5 min, but browsers always revalidate
+/api/*
+  Cache-Control: public, s-maxage=300, stale-while-revalidate=600
+
+# Code + HTML: always revalidate so updates show immediately (ETag makes this cheap)
+/
+  Cache-Control: no-cache
+/index.html
+  Cache-Control: no-cache
+/styles.css
+  Cache-Control: no-cache
+/app.js
+  Cache-Control: no-cache

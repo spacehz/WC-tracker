@@ -1,0 +1,175 @@
+{
+  "_README": "THIS FILE IS YOURS TO EDIT. Add/remove countries and broadcasters. 'name' = English name, 'nameAr' = Arabic name (shown when site is in Arabic). 'flag' = emoji, 'type' = 'tv' or 'stream', 'free' true = free-to-air / free streaming. After editing, redeploy (git push). Verify rights for your audience — these are seeded defaults for the 2026 World Cup.",
+  "defaultCountry": "TN",
+  "countries": {
+    "TN": {
+      "name": "Tunisia",
+      "nameAr": "تونس",
+      "flag": "🇹🇳",
+      "broadcasters": [
+        { "name": "beIN Sports MENA", "type": "tv", "language": "العربية", "free": false, "url": "https://www.beinsports.com/" }
+      ]
+    },
+    "SA": {
+      "name": "Saudi Arabia",
+      "nameAr": "السعودية",
+      "flag": "🇸🇦",
+      "broadcasters": [
+        { "name": "beIN Sports MENA", "type": "tv", "language": "العربية", "free": false, "url": "https://www.beinsports.com/" }
+      ]
+    },
+    "EG": {
+      "name": "Egypt",
+      "nameAr": "مصر",
+      "flag": "🇪🇬",
+      "broadcasters": [
+        { "name": "beIN Sports MENA", "type": "tv", "language": "العربية", "free": false, "url": "https://www.beinsports.com/" }
+      ]
+    },
+    "DZ": {
+      "name": "Algeria",
+      "nameAr": "الجزائر",
+      "flag": "🇩🇿",
+      "broadcasters": [
+        { "name": "beIN Sports MENA", "type": "tv", "language": "العربية", "free": false, "url": "https://www.beinsports.com/" }
+      ]
+    },
+    "MA": {
+      "name": "Morocco",
+      "nameAr": "المغرب",
+      "flag": "🇲🇦",
+      "broadcasters": [
+        { "name": "beIN Sports MENA", "type": "tv", "language": "العربية", "free": false, "url": "https://www.beinsports.com/" }
+      ]
+    },
+    "AE": {
+      "name": "United Arab Emirates",
+      "nameAr": "الإمارات",
+      "flag": "🇦🇪",
+      "broadcasters": [
+        { "name": "beIN Sports MENA", "type": "tv", "language": "العربية", "free": false, "url": "https://www.beinsports.com/" }
+      ]
+    },
+    "QA": {
+      "name": "Qatar",
+      "nameAr": "قطر",
+      "flag": "🇶🇦",
+      "broadcasters": [
+        { "name": "beIN Sports MENA", "type": "tv", "language": "العربية", "free": false, "url": "https://www.beinsports.com/" }
+      ]
+    },
+    "IQ": {
+      "name": "Iraq",
+      "nameAr": "العراق",
+      "flag": "🇮🇶",
+      "broadcasters": [
+        { "name": "beIN Sports MENA", "type": "tv", "language": "العربية", "free": false, "url": "https://www.beinsports.com/" }
+      ]
+    },
+    "JO": {
+      "name": "Jordan",
+      "nameAr": "الأردن",
+      "flag": "🇯🇴",
+      "broadcasters": [
+        { "name": "beIN Sports MENA", "type": "tv", "language": "العربية", "free": false, "url": "https://www.beinsports.com/" }
+      ]
+    },
+    "US": {
+      "name": "United States",
+      "nameAr": "الولايات المتحدة",
+      "flag": "🇺🇸",
+      "broadcasters": [
+        { "name": "FOX / FS1", "type": "tv", "language": "English", "free": false, "url": "https://www.foxsports.com/soccer/fifa-world-cup" },
+        { "name": "Telemundo / Universo", "type": "tv", "language": "Español", "free": false, "url": "https://www.telemundodeportes.com/" },
+        { "name": "Tubi", "type": "stream", "language": "English", "free": true, "url": "https://tubitv.com/" }
+      ]
+    },
+    "GB": {
+      "name": "United Kingdom",
+      "nameAr": "المملكة المتحدة",
+      "flag": "🇬🇧",
+      "broadcasters": [
+        { "name": "BBC iPlayer", "type": "stream", "language": "English", "free": true, "url": "https://www.bbc.co.uk/iplayer" },
+        { "name": "ITVX", "type": "stream", "language": "English", "free": true, "url": "https://www.itv.com/watch" }
+      ]
+    },
+    "CA": {
+      "name": "Canada",
+      "nameAr": "كندا",
+      "flag": "🇨🇦",
+      "broadcasters": [
+        { "name": "TSN", "type": "tv", "language": "English", "free": false, "url": "https://www.tsn.ca/" },
+        { "name": "CTV", "type": "tv", "language": "English", "free": true, "url": "https://www.ctv.ca/" }
+      ]
+    },
+    "MX": {
+      "name": "Mexico",
+      "nameAr": "المكسيك",
+      "flag": "🇲🇽",
+      "broadcasters": [
+        { "name": "Canal 5 / TUDN", "type": "tv", "language": "Español", "free": true, "url": "https://www.tudn.com/" },
+        { "name": "TV Azteca", "type": "tv", "language": "Español", "free": true, "url": "https://www.tvazteca.com/" }
+      ]
+    },
+    "FR": {
+      "name": "France",
+      "nameAr": "فرنسا",
+      "flag": "🇫🇷",
+      "broadcasters": [
+        { "name": "TF1", "type": "tv", "language": "Français", "free": true, "url": "https://www.tf1.fr/" },
+        { "name": "beIN Sports", "type": "tv", "language": "Français", "free": false, "url": "https://www.beinsports.com/fr/" }
+      ]
+    },
+    "DE": {
+      "name": "Germany",
+      "nameAr": "ألمانيا",
+      "flag": "🇩🇪",
+      "broadcasters": [
+        { "name": "ARD", "type": "tv", "language": "Deutsch", "free": true, "url": "https://www.sportschau.de/" },
+        { "name": "ZDF", "type": "tv", "language": "Deutsch", "free": true, "url": "https://www.zdf.de/" }
+      ]
+    },
+    "ES": {
+      "name": "Spain",
+      "nameAr": "إسبانيا",
+      "flag": "🇪🇸",
+      "broadcasters": [
+        { "name": "RTVE (La 1)", "type": "tv", "language": "Español", "free": true, "url": "https://www.rtve.es/" }
+      ]
+    },
+    "IT": {
+      "name": "Italy",
+      "nameAr": "إيطاليا",
+      "flag": "🇮🇹",
+      "broadcasters": [
+        { "name": "RAI", "type": "tv", "language": "Italiano", "free": true, "url": "https://www.rai.it/" }
+      ]
+    },
+    "BR": {
+      "name": "Brazil",
+      "nameAr": "البرازيل",
+      "flag": "🇧🇷",
+      "broadcasters": [
+        { "name": "Globo / SporTV", "type": "tv", "language": "Português", "free": true, "url": "https://globoplay.globo.com/" }
+      ]
+    },
+    "AR": {
+      "name": "Argentina",
+      "nameAr": "الأرجنتين",
+      "flag": "🇦🇷",
+      "broadcasters": [
+        { "name": "TV Pública", "type": "tv", "language": "Español", "free": true, "url": "https://www.tvpublica.com.ar/" },
+        { "name": "TyC Sports", "type": "tv", "language": "Español", "free": false, "url": "https://www.tycsports.com/" }
+      ]
+    },
+    "AU": {
+      "name": "Australia",
+      "nameAr": "أستراليا",
+      "flag": "🇦🇺",
+      "broadcasters": [
+        { "name": "Optus Sport", "type": "stream", "language": "English", "free": false, "url": "https://sport.optus.com.au/" },
+        { "name": "SBS", "type": "tv", "language": "English", "free": true, "url": "https://www.sbs.com.au/sport/" }
+      ]
+    }
+  }
+}

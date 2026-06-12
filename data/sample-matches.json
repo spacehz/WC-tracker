@@ -1,0 +1,68 @@
+[
+  {
+    "id": 9001,
+    "utcDate": "2026-06-12T16:00:00Z",
+    "status": "finished",
+    "stage": "GROUP_STAGE",
+    "group": "Group A",
+    "venue": "Estadio Azteca, Mexico City",
+    "home": { "name": "Mexico", "code": "MEX", "crest": null },
+    "away": { "name": "Croatia", "code": "CRO", "crest": null },
+    "score": { "home": 2, "away": 1 }
+  },
+  {
+    "id": 9002,
+    "utcDate": "2026-06-12T20:00:00Z",
+    "status": "live",
+    "stage": "GROUP_STAGE",
+    "group": "Group B",
+    "venue": "MetLife Stadium, New York",
+    "home": { "name": "United States", "code": "USA", "crest": null },
+    "away": { "name": "Wales", "code": "WAL", "crest": null },
+    "score": { "home": 1, "away": 0 }
+  },
+  {
+    "id": 9003,
+    "utcDate": "2026-06-13T19:00:00Z",
+    "status": "scheduled",
+    "stage": "GROUP_STAGE",
+    "group": "Group C",
+    "venue": "SoFi Stadium, Los Angeles",
+    "home": { "name": "Argentina", "code": "ARG", "crest": null },
+    "away": { "name": "Nigeria", "code": "NGA", "crest": null },
+    "score": { "home": null, "away": null }
+  },
+  {
+    "id": 9004,
+    "utcDate": "2026-06-13T22:00:00Z",
+    "status": "scheduled",
+    "stage": "GROUP_STAGE",
+    "group": "Group D",
+    "venue": "BMO Field, Toronto",
+    "home": { "name": "France", "code": "FRA", "crest": null },
+    "away": { "name": "Australia", "code": "AUS", "crest": null },
+    "score": { "home": null, "away": null }
+  },
+  {
+    "id": 9005,
+    "utcDate": "2026-06-14T18:00:00Z",
+    "status": "scheduled",
+    "stage": "GROUP_STAGE",
+    "group": "Group E",
+    "venue": "Lumen Field, Seattle",
+    "home": { "name": "Brazil", "code": "BRA", "crest": null },
+    "away": { "name": "Japan", "code": "JPN", "crest": null },
+    "score": { "home": null, "away": null }
+  },
+  {
+    "id": 9006,
+    "utcDate": "2026-06-14T21:00:00Z",
+    "status": "scheduled",
+    "stage": "GROUP_STAGE",
+    "group": "Group F",
+    "venue": "AT&T Stadium, Dallas",
+    "home": { "name": "England", "code": "ENG", "crest": null },
+    "away": { "name": "Tunisia", "code": "TUN", "crest": null },
+    "score": { "home": null, "away": null }
+  }
+]

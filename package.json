@@ -1,0 +1,16 @@
+{
+  "name": "worldcup-watch",
+  "version": "1.0.0",
+  "private": true,
+  "description": "World Cup match schedule + where-to-watch broadcaster guide",
+  "scripts": {
+    "dev": "wrangler pages dev .",
+    "start": "wrangler pages dev ."
+  },
+  "devDependencies": {
+    "wrangler": "^3"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
