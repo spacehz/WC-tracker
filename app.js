@@ -5,7 +5,7 @@
   // ---------- Translations ----------
   const DICT = {
     ar: {
-      title: 'كأس العالم 2026 — جدول المباريات وأين تشاهدها',
+      title: 'كأس العالم 2026 — مواعيد المباريات والقنوات الناقلة | فين الماتش',
       hero_h1: 'كأس العالم 2026 — كل المباريات وأين تشاهدها',
       hero_sub: 'مواعيد اليوم وغداً بتوقيت {tz}. اختر بلدك لمعرفة القناة الناقلة لكل مباراة.',
       search_ph: 'ابحث عن منتخب (مثال: تونس، البرازيل)…',
@@ -34,14 +34,14 @@
       howto_p: 'اختر بلدك من الأعلى. لكل مباراة نعرض القنوات الرسمية الناقلة في بلدك — المجانية والمدفوعة. اضغط «أضِف إلى التقويم» لأي مباراة لإضافتها إلى تقويم جوجل أو آبل أو أوتلوك مع تذكير، حتى لا تفوتك انطلاقة المباراة.',
       about_h: 'عن كأس العالم 2026',
       about_p: 'كأس العالم 2026 هو أول بطولة تضم 48 منتخباً، تستضيفها الولايات المتحدة وكندا والمكسيك في صيف 2026 عبر 16 مدينة. هذا الموقع يجمع جدول مباريات اليوم وغداً في مكان واحد ويحوّل كل موعد إلى توقيتك المحلي تلقائياً.',
-      footer_text: '⚽ متابعة كأس العالم — الجدول ودليل البث. غير مرتبط بالفيفا. قد تتغير حقوق البث؛ تحقق من قنواتك المحلية.',
+      footer_text: '⚽ فين الماتش — جدول مباريات كأس العالم 2026 ودليل القنوات الناقلة. غير مرتبط بالفيفا. قد تتغير حقوق البث؛ تحقق من قنواتك المحلية.',
       footer_about: 'حول',
       footer_privacy: 'سياسة الخصوصية',
       notice_sample: '⚙️ يتم عرض مباريات تجريبية — أضف مفتاح API المجاني في Cloudflare لعرض جدول كأس العالم الحقيقي.',
       load_error: 'تعذّر تحميل المباريات. افتح الموقع عبر عنوانه (مثل http://localhost:8788) وليس بالنقر المزدوج على الملف.',
     },
     en: {
-      title: 'World Cup 2026 — Match Schedule & Where to Watch',
+      title: 'World Cup 2026 — Schedule & Where to Watch | Feen El Match',
       hero_h1: 'World Cup 2026 — every match, and where to watch it',
       hero_sub: "Today & tomorrow's kick-offs in {tz}. Pick your country to see which channel is showing each game.",
       search_ph: 'Search a team (e.g. Tunisia, Brazil)…',
@@ -70,7 +70,7 @@
       howto_p: 'Pick your country at the top. For every match we show the official broadcasters in your country — free-to-air and paid streaming. Tap “Add to calendar” on any match to drop it into Google, Apple or Outlook with a reminder.',
       about_h: 'About the 2026 World Cup',
       about_p: 'The 2026 FIFA World Cup is the first 48-team tournament, co-hosted by the USA, Canada and Mexico across 16 cities in summer 2026. This site keeps today and tomorrow’s schedule in one place and converts every kick-off to your local time automatically.',
-      footer_text: '⚽ World Cup Watch — schedule & TV guide. Not affiliated with FIFA. Broadcaster availability may change; check local listings.',
+      footer_text: '⚽ Feen El Match — World Cup 2026 schedule & TV guide. Not affiliated with FIFA. Broadcaster availability may change; check local listings.',
       footer_about: 'About',
       footer_privacy: 'Privacy Policy',
       notice_sample: '⚙️ Showing sample fixtures — add your free football API key in Cloudflare to load the real World Cup schedule.',
