@@ -1,0 +1,9 @@
+{
+  "_README": "Map a VIDEO to a MATCH by its ID. The match ID comes from the fixtures API. Easiest way to find it: open a match on the site and click Watch — the URL shows /watch.html?id=XXXX. Put that id below with a legal embed URL. ONLY these platforms load: youtube.com, youtube-nocookie.com, dailymotion.com, twitch.tv. Use official highlight/live embeds, e.g. https://www.youtube.com/embed/VIDEO_ID. Matches without an entry just show the official broadcaster links (no Watch button).",
+  "embeds": {
+    "9006": "https://www.youtube.com/embed/aqz-KE-bpKQ",
+    "537345": "https://www.youtube.com/embed/VIDEO_ID"
+  }
+
+
+}

@@ -45,6 +45,8 @@ a { color: var(--accent); }
 .header-inner { display: flex; align-items: center; justify-content: space-between; height: 60px; }
 .brand { display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 1.15rem; text-decoration: none; color: var(--text); }
 .brand-ball { font-size: 1.4rem; }
+.brand-lockup { display: flex; flex-direction: column; line-height: 1.05; }
+.brand-sub { font-size: .62rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--text-dim); }
 .accent { color: var(--accent); }
 .header-controls { display: flex; align-items: center; gap: 10px; }
 .country-picker select {
@@ -153,6 +155,12 @@ a { color: var(--accent); }
 .broadcaster:hover { border-color: var(--accent); }
 .broadcaster .tag { margin-inline-start: auto; font-size: .72rem; color: var(--text-dim); }
 .broadcaster .tag.free { color: var(--accent); font-weight: 700; }
+.watch-cta {
+  display: block; text-align: center; margin: 4px 0 14px; padding: 13px;
+  background: var(--accent); color: #042b20; font-weight: 800; font-size: 1rem;
+  border-radius: 12px; text-decoration: none;
+}
+.watch-cta:hover { filter: brightness(1.08); }
 .cal-buttons { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
 .cal-btn {
   flex: 1; min-width: 130px; text-align: center; padding: 10px; border-radius: 10px;

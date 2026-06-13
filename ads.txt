@@ -1,4 +1,3 @@
-# Google AdSense — after you are approved, AdSense will give you a line like:
-# google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
-# If AdSense shows a different last token, paste their exact line instead.
-google.com, pub-5435415012940296, DIRECT, f08c47fec0942fa0
+# Adcash — paste the exact ads.txt line(s) from your Adcash dashboard
+# (Account / Settings > ads.txt). It usually looks like:
+# adcash.com, YOUR_PUBLISHER_ID, DIRECT

@@ -16,7 +16,7 @@
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚽</text></svg>" />
-  <link rel="stylesheet" href="/styles.css?v=5" />
+  <link rel="stylesheet" href="/styles.css?v=6" />
 
   <!-- Structured data: helps Google understand the site + show rich results -->
   <script type="application/ld+json">
@@ -50,16 +50,24 @@
   </script>
 
   <!-- ============================================================= -->
-  <!-- GOOGLE ADSENSE — publisher ID ca-pub-5435415012940296 is set.    -->
+  <!-- ADCASH Auto-Tag — auto-places ads site-wide (zone jdppgdwmh3).   -->
   <!-- ============================================================= -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5435415012940296" crossorigin="anonymous"></script>
+  <script src="https://acscdn.com/script/aclib.js"></script>
+  <script type="text/javascript">
+    aclib.runAutoTag({
+      zoneId: 'jdppgdwmh3',
+    });
+  </script>
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="/">
         <span class="brand-ball">⚽</span>
-        <span class="brand-text">فين <span class="accent">الماتش</span></span>
+        <span class="brand-lockup">
+          <span class="brand-text">فين <span class="accent">الماتش</span></span>
+          <span class="brand-sub">Feen El Match</span>
+        </span>
       </a>
       <div class="header-controls">
         <label class="country-picker">
@@ -78,16 +86,6 @@
       <p class="hero-sub" id="heroSub">مواعيد مباريات اليوم وغداً بتوقيتك المحلي. اختر بلدك لمعرفة القناة الناقلة لكل مباراة.</p>
     </section>
 
-    <!-- Top responsive ad -->
-    <div class="ad-wrap">
-      <ins class="adsbygoogle"
-           style="display:block"
-           data-ad-client="ca-pub-5435415012940296"
-           data-ad-slot="0000000000"
-           data-ad-format="auto"
-           data-full-width-responsive="true"></ins>
-    </div>
-
     <section class="filters" aria-label="Filters">
       <input id="search" type="search" class="search" placeholder="ابحث عن منتخب (مثال: تونس، البرازيل)…" data-i18n-ph="search_ph" autocomplete="off" />
       <div class="chips" id="dayChips"></div>
@@ -104,16 +102,6 @@
     <section id="matchList" class="match-list" aria-live="polite">
       <div class="loading" data-i18n="loading">جارٍ تحميل المباريات…</div>
     </section>
-
-    <!-- In-content ad -->
-    <div class="ad-wrap">
-      <ins class="adsbygoogle"
-           style="display:block"
-           data-ad-client="ca-pub-5435415012940296"
-           data-ad-slot="1111111111"
-           data-ad-format="auto"
-           data-full-width-responsive="true"></ins>
-    </div>
 
     <section class="info">
       <h2 data-i18n="howto_h">كيفية استخدام الدليل</h2>
@@ -158,6 +146,6 @@
     <button class="dialog-close" id="dialogClose" aria-label="Close">✕</button>
   </dialog>
 
-  <script src="/app.js?v=5"></script>
+  <script src="/app.js?v=8"></script>
 </body>
 </html>

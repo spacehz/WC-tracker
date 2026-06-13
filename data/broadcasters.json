@@ -1,5 +1,5 @@
 {
-  "_README": "THIS FILE IS YOURS TO EDIT. Add/remove countries and broadcasters. 'name' = English name, 'nameAr' = Arabic name (shown when site is in Arabic). 'flag' = emoji, 'type' = 'tv' or 'stream', 'free' true = free-to-air / free streaming. After editing, redeploy (git push). Verify rights for your audience — these are seeded defaults for the 2026 World Cup.",
+  "_README": "THIS FILE IS YOURS TO EDIT. 'name'/'nameAr' = channel name, 'flag' emoji, 'type' tv|stream, 'free' true=free-to-air, 'url' = official site. Per-match VIDEOS are configured separately in data/match-embeds.json (keyed by match id).",
   "defaultCountry": "TN",
   "countries": {
     "TN": {

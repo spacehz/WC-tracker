@@ -26,6 +26,7 @@
       no_broadcaster_country: 'لا توجد قناة ناقلة لهذا البلد بعد.',
       vs: 'ضد',
       where_to_watch: 'أين تشاهد في',
+      watch_match: 'شاهد المباراة',
       add_calendar: 'أضِف إلى تقويمك',
       cal_google: '📅 جوجل',
       cal_ics: '🍎 آبل / أوتلوك (.ics)',
@@ -62,6 +63,7 @@
       no_broadcaster_country: 'No broadcaster listed for this country yet.',
       vs: 'vs',
       where_to_watch: 'Where to watch in',
+      watch_match: 'Watch the match',
       add_calendar: 'Add to your calendar',
       cal_google: '📅 Google',
       cal_ics: '🍎 Apple / Outlook (.ics)',
@@ -97,6 +99,7 @@
   const state = {
     matches: [],
     countries: {},
+    embeds: {}, // matchId -> video embed URL, from data/match-embeds.json
     country: localStorage.getItem('wcw_country') || null,
     lang: localStorage.getItem('wcw_lang') || 'ar', // Arabic default
     status: 'all',
@@ -170,7 +173,16 @@
   });
 
   // ---------- Data ----------
+  // Per-match videos live in a plain static file you edit by hand: data/match-embeds.json
+  async function loadEmbeds() {
+    try {
+      const r = await fetch('/data/match-embeds.json', { cache: 'no-store' });
+      if (r.ok) state.embeds = (await r.json()).embeds || {};
+    } catch (e) {}
+  }
+
   async function load() {
+    await loadEmbeds();
     try {
       const res = await fetch('/api/matches');
       const data = await res.json();
@@ -195,6 +207,9 @@
     state.matches = within2Days((matches || []).slice()).sort(
       (a, b) => new Date(a.utcDate) - new Date(b.utcDate)
     );
+    state.matches.forEach((m) => {
+      m.embed = state.embeds[String(m.id)] || null;
+    });
     state.countries = countries || {};
     if (!state.country || !state.countries[state.country]) state.country = defaultCountry || 'US';
     showSourceNotice(source);
@@ -371,12 +386,22 @@
           .join('')
       : `<p class="dlg-sub">${t('no_broadcaster_country')}</p>`;
 
+    // Per-match video (from data/match-embeds.json) → internal watch page.
+    const watchUrl =
+      `/watch.html?id=${encodeURIComponent(m.id)}` +
+      `&h=${encodeURIComponent(tName(m.home))}&a=${encodeURIComponent(tName(m.away))}` +
+      `&t=${encodeURIComponent(m.utcDate)}&g=${encodeURIComponent(m.group || stageLabel(m.stage) || '')}`;
+    const watchBtn = m.embed
+      ? `<a class="watch-cta" href="${watchUrl}">▶️ ${t('watch_match')}</a>`
+      : '';
+
     el('dialogBody').innerHTML = `
       <div class="dlg-head">
-        <div class="dlg-sub">${m.group || stageLabel(m.stage)}${m.venue ? ' · ' + m.venue : ''}</div>
+        <div class="dlg-sub">${m.group || stageLabel(m.stage)}${m.venue ? ' · ' + m.venue : ''} <span style="opacity:.45">· #${m.id}</span></div>
         <div class="dlg-teams">${tName(m.home)} <span style="opacity:.5">${t('vs')}</span> ${tName(m.away)}</div>
         <div class="dlg-sub">${fmtFullDay(d)} · ${fmtTime(d)} (${tz})</div>
       </div>
+      ${watchBtn}
       <div class="dlg-section-title">${t('where_to_watch')} ${c ? c.flag + ' ' + cName(c) : ''}</div>
       <div class="broadcaster-list">${broadcasters}</div>
       <div class="dlg-section-title">${t('add_calendar')}</div>
@@ -474,30 +499,9 @@
     document.head.appendChild(s);
   }
 
-  // ---------- AdSense ----------
-  // The loader script (with your real publisher ID) is in the <head>, which is
-  // what AdSense needs for site verification + Auto ads. For the MANUAL ad units
-  // below, only activate a slot once it has a real ad-unit slot ID. Any slot
-  // still on a placeholder is hidden so it never shows as a blank box.
-  const PLACEHOLDER_SLOTS = ['0000000000', '1111111111'];
-  function initAds() {
-    document.querySelectorAll('ins.adsbygoogle').forEach((ins) => {
-      const client = ins.getAttribute('data-ad-client') || '';
-      const slot = ins.getAttribute('data-ad-slot') || '';
-      const ready = client && !client.includes('XXXX') && slot && !slot.includes('X') && !PLACEHOLDER_SLOTS.includes(slot);
-      if (ready) {
-        try {
-          (window.adsbygoogle = window.adsbygoogle || []).push({});
-        } catch (e) {}
-      } else {
-        const wrap = ins.closest('.ad-wrap');
-        if (wrap) wrap.style.display = 'none';
-      }
-    });
-  }
-
   // ---------- Boot ----------
+  // Ads are handled by the Adcash Auto-Tag script in index.html <head>.
   initTheme();
   applyI18n();
-  load().then(initAds);
+  load();
 })();
